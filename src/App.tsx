@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Categories from './Categories/Categories'
 import Navigation from './Navigation/Navigation'
 import './App.scss';
+import ArtView from './ArtView/ArtView'
 
 interface State {
   artPieces: Props[];
@@ -59,6 +60,7 @@ class App extends Component<{}, State> {
         <Navigation />
         <main className="App">
           <Categories />
+          <ArtView />
         </main>
       </>
     )
