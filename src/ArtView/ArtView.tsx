@@ -6,27 +6,20 @@ interface State {
 }
 
 interface Props {
-  id: number;
-  image_src: string;
-  description: string;
-  title: string;
-  date_start: number;
-  artist_title: string;
-  classification_titles: Array<string>;
-
+imageId: string
 }
 
-class ArtView extends Component<{}, State> {
-  constructor(props: object) {
+class ArtView extends Component< Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = {
       userLikesPhoto: undefined,
-     }
+    }
   }
   render() {
     return(
       <div className="art-view-container">
-           <img className="featured-art" src="https://www.artic.edu/iiif/2/1adf2696-8489-499b-cad2-821d7fde4b33/full/843,/0/default.jpg" alt="painting of people at a park on a sunny day" />
+        <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.props.imageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
         <div className="user-choices">
           <button className="ratings-choice" >👍</button>  
           <button className="ratings-choice" >👎</button>  

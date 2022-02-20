@@ -3,9 +3,4 @@ const getArtDetails = (category: string) => {
   .then(response => response.json())
 }
 
-const getArtImage = (id: string) => {
-  return fetch(`https://www.artic.edu/iiif/2/${id}/full/843,/0/default.jpg`)
-  .then(response => response.json())
-}
-
 export { getArtDetails, getArtImage }
