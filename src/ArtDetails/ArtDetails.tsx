@@ -13,14 +13,17 @@ interface Details {
   date_start: number;
   image_id: string;
   artist_title: string;
-  classification_titles: Array<string>
+  classification_titles: Array<string>;
 }
 
 const ArtDetails: React.FC<Props> = props => {
   {console.log(props.artDetails.title)}
+
   return (
-    <h1>{props.artDetails.title}</h1>
-    )
+    <section className="art-details-container">
+      <h2>{props.artDetails.title}</h2>
+    </section>
+  )
 }
 
 export default ArtDetails
