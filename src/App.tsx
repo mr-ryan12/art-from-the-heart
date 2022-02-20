@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Categories from './Categories/Categories'
 import Navigation from './Navigation/Navigation'
+import { getArtDetails, getArtImage } from '../apiCalls';
 import './App.scss';
 import ArtView from './ArtView/ArtView'
+
 
 interface State {
   artPieces: Props[];
@@ -54,12 +56,30 @@ class App extends Component<{}, State> {
     }
   }
 
+  componentDidMount() {
+   
+  }
+
+  getCategory = (category: string) => {
+    getArtDetails(category)
+    .then(data => {
+      console.log(data.data)
+      this.setState({artPieces: data.data})
+    })
+  }
+
+  // getImage = () => {
+    
+
+  //   })
+  // }
+
   render() {
     return (
       <>
         <Navigation />
         <main className="App">
-          <Categories />
+          <Categories getCategory={this.getCategory} />
           <ArtView />
         </main>
       </>
