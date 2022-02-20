@@ -3,4 +3,4 @@ const getArtDetails = (category: string) => {
   .then(response => response.json())
 }
 
-export { getArtDetails, getArtImage }
+export { getArtDetails }
