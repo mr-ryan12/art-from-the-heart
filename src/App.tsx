@@ -10,7 +10,13 @@ import {Route, Switch} from 'react-router-dom';
 interface State {
   artPieces: Props[];
   imgId: string;
-  singleImageDetails: object | undefined;
+  singleImageDetails: {
+    date_end: number;
+    date_start?: number;
+    image_id?: string;
+    title?: string;
+    _score?: number;
+  } | object | undefined
 }
 
 interface Props {
@@ -37,7 +43,6 @@ class App extends Component<{}, State> {
   getCategory = (category: string) => {
     getArtDetails(category)
     .then(data => {
-      console.log(data.data)
       this.setState({artPieces: data.data})
       let randomImage = this.state.artPieces[this.getRandomIndex(this.state.artPieces.length)]['image_id']
       this.getImage(randomImage)
@@ -58,11 +63,10 @@ class App extends Component<{}, State> {
   render() {
     return (
       <>
-      {console.log(this.state.singleImageDetails)}
         <Navigation />
         <main className="App">
           < Route exact path='/' render={() => <Categories getCategory={this.getCategory} imageId={this.state.imgId} /> }/>
-          < Route exact path='/:category' render={() => <ArtView imageId={this.state.imgId} />} />
+          < Route exact path='/:category' render={() => <ArtView imageId={this.state.imgId} artPieces={this.state.artPieces}/>} />
         </main>
       </>
     )
