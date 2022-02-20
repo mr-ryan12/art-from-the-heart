@@ -1,32 +1,25 @@
 import React, { Component } from 'react';
-import ArtDetails from '../ArtDetails/ArtDetails'
+import ArtDetails from '../ArtDetails/ArtDetails';
 import './ArtView.scss';
 
 interface State {
   userLikesPhoto: boolean | undefined;
-  singlePiece: {
-    id: number;
-    image_src: string;
-    description: string;
-    title: string;
-    date_start: number;
-    image_id: string;
-    artist_title: string;
-    classification_titles: Array<string>
-  } | any
+  singlePiece: ImageDetails | any;
 }
 
-// interface ImageDetails {
-//   date_end: number | undefined;
-//   date_start?: number;
-//   image_id?: string;
-//   title?: string;
-//   _score?: number;
-// }
+interface ImageDetails {
+  id: number;
+  image_src: string;
+  description: string;
+  title: string;
+  date_start: number;
+  image_id: string;
+  artist_title: string;
+  classification_titles: Array<string>;
+}
 
 interface Props {
   imageId: string;
-  // imageDetails: ImageDetails | object | undefined;
   artPieces: {
     id: number;
     image_src: string;
@@ -35,7 +28,7 @@ interface Props {
     date_start: number;
     image_id: string;
     artist_title: string;
-    classification_titles: Array<string>
+    classification_titles: Array<string>;
   }[]
 }
 
