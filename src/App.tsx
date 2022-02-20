@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Categories from './Categories/Categories'
 import Navigation from './Navigation/Navigation'
-import { getArtDetails, getArtImage } from './apiCalls';
+import { getArtDetails} from './apiCalls';
 import './App.scss';
 import ArtView from './ArtView/ArtView'
 import {Route, Link, Switch} from 'react-router-dom'
