@@ -51,6 +51,7 @@ class ArtView extends Component<Props, State> {
     return(
       <div className="art-view-container">
         <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.props.imageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
+        {/* <div className="centered">Centered</div> */}
         <div className="user-choices">
           <button className="ratings-choice" onClick={() => this.findPiece()}>👍</button>  
           <button className="ratings-choice" >👎</button>  

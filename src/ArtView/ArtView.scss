@@ -12,6 +12,23 @@
 
 .featured-art {
   max-width: 95%;
+  max-height: 60vh;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000BB;
+  padding: 20px;
+  color: #FFF;
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
 }
 
 .ratings-choice {
