@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getArtDetails } from '../apiCalls';
 import ArtDetails from '../ArtDetails/ArtDetails';
+import Loading from '../Loading/Loading';
 import './ArtView.scss';
 
 interface State {
@@ -79,7 +80,7 @@ class ArtView extends Component<Props, State> {
   }
   
   render() {
-    const loading = this.state.isLoading ? <h2>loading...</h2> : <><img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
+    const loading = this.state.isLoading ? <Loading /> : <><img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
     <div className="user-choices">
       <button className="ratings-choice" onClick={() => this.findPiece(true)}>👍</button>  
       <button className="ratings-choice" onClick={() => this.findPiece(false)}>👎</button>  
