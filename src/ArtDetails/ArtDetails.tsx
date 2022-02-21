@@ -25,7 +25,7 @@ interface Details {
 
 const ArtDetails: React.FC<Props> = props => {
   const likedMessage = props.isLiked ? <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other voters liked this art! You have great taste!</p>
-                       : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of haters agree! Congratulations!</p>
+                       : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
   return (
     <section className="art-details-container">
       <h2>TITLE:</h2><p className="art-details-text">{props.artDetails.title}</p>

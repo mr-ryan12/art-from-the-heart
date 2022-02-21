@@ -2,16 +2,14 @@ import React from 'react'
 import CategoryCard from '../CategoryCard/CategoryCard'
 import './Categories.scss'
 
-interface CategoryProps {
-  getCategory: (text: string) => void;
-  imageId: string
+interface Props {
+  categories: Array<string>
 }
 
-const Categories: React.FC<CategoryProps> = ({getCategory, imageId}) => {
-  const categories = ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastels', 'chalk']
-  const allCategories = categories.map(category => {
+const Categories: React.FC<Props> = props => {
+  const allCategories = props.categories.map(category => {
     return (
-      <CategoryCard key={category} category={category} acquireCategory={getCategory} artImageId={imageId} /> //we need to pass down the function to here as a prop
+      <CategoryCard key={category} category={category} />
     )
   })
   

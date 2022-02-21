@@ -6,58 +6,17 @@ import './App.scss';
 import ArtView from './ArtView/ArtView';
 import {Route, Switch} from 'react-router-dom';
 
-
 interface State {
-  artPieces: Props[];
-  imgId: string;
-  singleImageDetails: {
-    date_end: number;
-    date_start?: number;
-    image_id?: string;
-    title?: string;
-    _score?: number;
-  } | object | undefined
-}
-
-interface Props {
-  id: number;
-  image_src: string;
-  description: string;
-  title: string;
-  date_start: number;
-  image_id: string;
-  artist_title: string;
-  classification_titles: Array<string>;
+  categories: Array<string>;
 }
 
 class App extends Component<{}, State> {
   constructor(props: object) {
     super(props)
+
     this.state = {
-      imgId: '',
-      artPieces: [],
-      singleImageDetails: {}
+      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastels', 'chalk']  
     }
-  }
-
-  getCategory = (category: string) => {
-    getArtDetails(category)
-    .then(data => {
-      this.setState({artPieces: data.data})
-      let randomImage = this.state.artPieces[this.getRandomIndex(this.state.artPieces.length)]['image_id']
-      this.getImage(randomImage)
-      let foundPiece = this.state.artPieces.find(piece => piece.image_id === randomImage)
-      this.setState({singleImageDetails: foundPiece})
-    })
-  }
-
-  getRandomIndex(max: number) {
-    return Math.floor(Math.random() * max);
-  }
-
-  
-  getImage = (image: string) => {
-    this.setState({imgId: image})
   }
 
   render() {
@@ -65,8 +24,8 @@ class App extends Component<{}, State> {
       <>
         <Navigation />
         <main className="App">
-          < Route exact path='/' render={() => <Categories getCategory={this.getCategory} imageId={this.state.imgId} /> }/>
-          < Route exact path='/:category' render={() => <ArtView imageId={this.state.imgId} artPieces={this.state.artPieces}/>} />
+          < Route exact path='/' render={() => <Categories categories={this.state.categories}/> }/>
+          < Route exact path='/:category' render={({ match }) => <ArtView category={match.params.category}/>} />
         </main>
       </>
     )
