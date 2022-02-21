@@ -7,8 +7,22 @@
   display: flex;
 }
 
+.title-link {
+  text-decoration: none;
+  display: flex;
+}
+
+.art-from-the {
+  color: white;
+}
+
 .logo-accent {
   color: red;
+}
+
+.logo-icon {
+  max-height: 60px;
+  margin: 0px 15px;
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
@@ -17,9 +31,3 @@
   }
 }
 
-.title-link {
-  text-decoration: none;
-}
-.art-from-the {
-  color: white;
-}
