@@ -10,7 +10,7 @@ interface Props {
 
 const CategoryCard: React.FC<Props> = props => {
   return (
-    <Link onClick={() => props.acquireCategory(props.category)} className='category-card' to={`/${props.category}`} >
+    <Link className='category-card' to={`/${props.category}`} >
       <section >
         <p>{props.category}</p>
       </section>

@@ -6,7 +6,6 @@ import './App.scss';
 import ArtView from './ArtView/ArtView';
 import {Route, Switch} from 'react-router-dom';
 
-
 interface State {
   artPieces: Props[];
   imgId: string;
@@ -66,7 +65,7 @@ class App extends Component<{}, State> {
         <Navigation />
         <main className="App">
           < Route exact path='/' render={() => <Categories getCategory={this.getCategory} imageId={this.state.imgId} /> }/>
-          < Route exact path='/:category' render={() => <ArtView imageId={this.state.imgId} artPieces={this.state.artPieces}/>} />
+          < Route exact path='/:category' render={({ match }) => <ArtView imageId={this.state.imgId} artPieces={this.state.artPieces} category={match.params.category}/>} />
         </main>
       </>
     )
