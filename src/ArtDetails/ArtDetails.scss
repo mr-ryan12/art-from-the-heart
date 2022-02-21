@@ -1,5 +1,23 @@
-// .art-details-container {
-//   position: relative;
-//   text-align: center;
-//   color: white;
-// }
+.art-details-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000BB;
+  padding: 20px;
+  color: #FFF;
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+  font-size: 30px;
+}
+
+.art-details-text {
+  margin-bottom: 20px;
+}
+
+.percent-message {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 700;
+}
