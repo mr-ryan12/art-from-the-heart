@@ -79,14 +79,6 @@ class ArtView extends Component<Props, State> {
     </section></>
     return(
       <div className="art-view-container">
-        {/* <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.props.imageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
-        <div className="user-choices">
-          <button className="ratings-choice" onClick={() => this.findPiece(true)}>👍</button>  
-          <button className="ratings-choice" onClick={() => this.findPiece(false)}>👎</button>  
-        </div>
-        <section className="image-details-container">
-          {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
-        </section> */}
         {loading}
       </div>
     )

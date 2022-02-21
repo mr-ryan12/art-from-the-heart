@@ -2,11 +2,6 @@ import React from 'react'
 import CategoryCard from '../CategoryCard/CategoryCard'
 import './Categories.scss'
 
-// interface CategoryProps {
-//   getCategory: (text: string) => void;
-//   imageId: string
-// }
-
 const Categories: React.FC = () => {
   const categories = ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastels', 'chalk']
   const allCategories = categories.map(category => {
