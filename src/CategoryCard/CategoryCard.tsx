@@ -3,9 +3,9 @@ import './CategoryCard.scss'
 import {Link} from 'react-router-dom'
 
 interface Props {
-  acquireCategory: (text: string) => void
+  // acquireCategory: (text: string) => void
   category: string;
-  artImageId: string
+  // artImageId: string
 }
 
 const CategoryCard: React.FC<Props> = props => {

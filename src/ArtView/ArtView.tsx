@@ -33,17 +33,6 @@ interface ImageDetails {
 }
 
 interface Props {
-  imageId: string;
-  artPieces: {
-    id: number;
-    image_src: string;
-    description: string;
-    title: string;
-    date_start: number;
-    image_id: string;
-    artist_title: string;
-    classification_titles: Array<string>;
-  }[]
   category: string;
 }
 
