@@ -4,6 +4,7 @@ import '../ArtView/ArtView.scss';
 
 interface Props {
   artDetails: Details;
+  isLiked: boolean | undefined;
 }
 
 interface Details {
@@ -23,6 +24,8 @@ interface Details {
 }
 
 const ArtDetails: React.FC<Props> = props => {
+  const likedMessage = props.isLiked ? <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other voters liked this art! You have great taste!</p>
+                       : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of haters agree! Congratulations!</p>
   return (
     <section className="art-details-container">
       <h2>TITLE:</h2><p className="art-details-text">{props.artDetails.title}</p>
@@ -30,7 +33,7 @@ const ArtDetails: React.FC<Props> = props => {
       <h2>ENDING DATE:</h2><p className="art-details-text">{props.artDetails.date_end}</p>
       <h2>ARTIST:</h2><p className="art-details-text">{props.artDetails.artist_title}</p>
       <h2>DESCRIPTION:</h2><p className="art-details-text">{props.artDetails.thumbnail.alt_text}</p>
-      <p className="percent-message">You and 78% of other voters liked this art! You have great taste!</p>
+      {likedMessage}
     </section>
   )
 }

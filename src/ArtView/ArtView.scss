@@ -27,3 +27,10 @@
   box-shadow: 5px 5px 0px rgba(0, 0, 0, .25);
   cursor: pointer;
 }
+
+@media screen and (min-device-width: 0px) and (max-device-width: 800px) {
+  .featured-art {
+    max-width: 95vw;
+    max-height: 50vh;
+  }
+}

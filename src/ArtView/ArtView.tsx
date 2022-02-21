@@ -41,9 +41,9 @@ class ArtView extends Component<Props, State> {
     }
   }
 
-  findPiece = () => {
+  findPiece = (value: boolean) => {
     const foundPiece = this.props.artPieces.find(piece => piece.image_id === this.props.imageId)
-    this.setState({ singlePiece: foundPiece })
+    this.setState({ userLikesPhoto: value, singlePiece: foundPiece })
   }
 
 
@@ -51,13 +51,12 @@ class ArtView extends Component<Props, State> {
     return(
       <div className="art-view-container">
         <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.props.imageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
-        {/* <div className="centered">Centered</div> */}
         <div className="user-choices">
-          <button className="ratings-choice" onClick={() => this.findPiece()}>👍</button>  
-          <button className="ratings-choice" >👎</button>  
+          <button className="ratings-choice" onClick={() => this.findPiece(true)}>👍</button>  
+          <button className="ratings-choice" onClick={() => this.findPiece(false)}>👎</button>  
         </div>
         <section className="image-details-container">
-          {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece}/> : null}
+          {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
         </section>
       </div>
     )
