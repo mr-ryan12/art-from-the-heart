@@ -6,9 +6,17 @@ import './App.scss';
 import ArtView from './ArtView/ArtView';
 import {Route, Switch} from 'react-router-dom';
 
-class App extends Component {
+interface State {
+  categories: Array<string>;
+}
+
+class App extends Component<{}, State> {
   constructor(props: object) {
     super(props)
+
+    this.state = {
+      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastels', 'chalk']  
+    }
   }
 
   render() {
@@ -16,7 +24,7 @@ class App extends Component {
       <>
         <Navigation />
         <main className="App">
-          < Route exact path='/' render={() => <Categories /> }/>
+          < Route exact path='/' render={() => <Categories categories={this.state.categories}/> }/>
           < Route exact path='/:category' render={({ match }) => <ArtView category={match.params.category}/>} />
         </main>
       </>
