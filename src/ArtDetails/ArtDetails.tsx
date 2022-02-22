@@ -28,11 +28,11 @@ const ArtDetails: React.FC<Props> = props => {
                        : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
   return (
     <section className="art-details-container">
-      <h2>TITLE:</h2><p className="art-details-text">{props.artDetails.title}</p>
-      <h2>STARTING DATE:</h2><p className="art-details-text">{props.artDetails.date_start}</p>
-      <h2>ENDING DATE:</h2><p className="art-details-text">{props.artDetails.date_end}</p>
-      <h2>ARTIST:</h2><p className="art-details-text">{props.artDetails.artist_title}</p>
-      <h2>DESCRIPTION:</h2><p className="art-details-text">{props.artDetails.thumbnail.alt_text}</p>
+      <h2 className='title-details'>TITLE:</h2><p className="art-details-text">{props.artDetails.title}</p>
+      <h2 className='date-details'>STARTING DATE:</h2><p className="art-details-text">{props.artDetails.date_start}</p>
+      <h2 className='ending-date-details'>ENDING DATE:</h2><p className="art-details-text">{props.artDetails.date_end}</p>
+      <h2 className='artists-details'>ARTIST:</h2><p className="art-details-text">{props.artDetails.artist_title}</p>
+      <h2 className='description-details'>DESCRIPTION:</h2><p className="art-details-text">{props.artDetails.thumbnail.alt_text}</p>
       {likedMessage}
     </section>
   )
