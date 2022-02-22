@@ -59,6 +59,7 @@ class ArtView extends Component<Props, State> {
           randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id
         })
       })
+      .catch(error => console.log(error))
   }
 
   getRandomIndex = (max: number) => {
