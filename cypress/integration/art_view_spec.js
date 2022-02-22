@@ -39,30 +39,38 @@ describe('check to see if it works', () => {
 
   it('should display art details after click', () => {
     cy.get('.ratings-choice').eq(0).click()
-    cy.get('.title-details').should('have.text', 'TITLE:')
-    cy.get('.art-details-text').eq(0).should('have.text', 'Untitled (Painting)')
-    cy.get('.date-details').should('have.text', 'STARTING DATE:')
-    cy.get('.art-details-text').eq(1).should('have.text', '1953')
-    cy.get('.ending-date-details').should('have.text', 'ENDING DATE:')
-    cy.get('.art-details-text').eq(2).should('have.text', '1954')
-    cy.get('.artists-details').should('have.text', 'ARTIST:')
-    cy.get('.art-details-text').eq(3).should('have.text', 'Mark Rothko')
-    cy.get('.description-details').should('have.text', 'DESCRIPTION:')
-    cy.get('.art-details-text').eq(4).should('have.text', 'A work made of oil on canvas.')
-
+    .get('.title-details').should('have.text', 'TITLE:')
+    .get('.art-details-text').eq(0).should('have.text', 'Untitled (Painting)')
+    .get('.date-details').should('have.text', 'STARTING DATE:')
+    .get('.art-details-text').eq(1).should('have.text', '1953')
+    .get('.ending-date-details').should('have.text', 'ENDING DATE:')
+    .get('.art-details-text').eq(2).should('have.text', '1954')
+    .get('.artists-details').should('have.text', 'ARTIST:')
+    .get('.art-details-text').eq(3).should('have.text', 'Mark Rothko')
+    .get('.description-details').should('have.text', 'DESCRIPTION:')
+    .get('.art-details-text').eq(4).should('have.text', 'A work made of oil on canvas.')
+    .get('.percent-message').contains("of other voters liked this art! You have great taste!")
   })
 
   it('should display art details after click', () => {
     cy.get('.ratings-choice').eq(1).click()
-    cy.get('.title-details').should('have.text', 'TITLE:')
-    cy.get('.art-details-text').eq(0).should('have.text', 'Untitled (Painting)')
-    cy.get('.date-details').should('have.text', 'STARTING DATE:')
-    cy.get('.art-details-text').eq(1).should('have.text', '1953')
-    cy.get('.ending-date-details').should('have.text', 'ENDING DATE:')
-    cy.get('.art-details-text').eq(2).should('have.text', '1954')
-    cy.get('.artists-details').should('have.text', 'ARTIST:')
-    cy.get('.art-details-text').eq(3).should('have.text', 'Mark Rothko')
-    cy.get('.description-details').should('have.text', 'DESCRIPTION:')
-    cy.get('.art-details-text').eq(4).should('have.text', 'A work made of oil on canvas.')
+    .get('.title-details').should('have.text', 'TITLE:')
+    .get('.art-details-text').eq(0).should('have.text', 'Untitled (Painting)')
+    .get('.date-details').should('have.text', 'STARTING DATE:')
+    .get('.art-details-text').eq(1).should('have.text', '1953')
+    .get('.ending-date-details').should('have.text', 'ENDING DATE:')
+    .get('.art-details-text').eq(2).should('have.text', '1954')
+    .get('.artists-details').should('have.text', 'ARTIST:')
+    .get('.art-details-text').eq(3).should('have.text', 'Mark Rothko')
+    .get('.description-details').should('have.text', 'DESCRIPTION:')
+    .get('.art-details-text').eq(4).should('have.text', 'A work made of oil on canvas.')
+    .get('.percent-message').contains("of other people agree! Congratulations!")
+
+    
   })
+
+
+
+
+
 })
