@@ -36,5 +36,22 @@ describe('check to see if it works', () => {
   it('should be able to like a piece of art', () => {
     cy.get('.ratings-choice').first().click()
   })
-  
+
+  it('should display art details after click', () => {
+    cy.get('.ratings-choice').eq(0).click()
+    cy.get('.title-details').should('have.text', 'TITLE:')
+    cy.get('.date-details').should('have.text', 'STARTING DATE:')
+    cy.get('.ending-date-details').should('have.text', 'ENDING DATE:')
+    cy.get('.artists-details').should('have.text', 'ARTIST:')
+    cy.get('.description-details').should('have.text', 'DESCRIPTION:')
+  })
+
+  it('should display art details after click', () => {
+    cy.get('.ratings-choice').eq(1).click()
+    cy.get('.title-details').should('have.text', 'TITLE:')
+    cy.get('.date-details').should('have.text', 'STARTING DATE:')
+    cy.get('.ending-date-details').should('have.text', 'ENDING DATE:')
+    cy.get('.artists-details').should('have.text', 'ARTIST:')
+    cy.get('.description-details').should('have.text', 'DESCRIPTION:')
+  })
 })
