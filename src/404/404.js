@@ -1,7 +1,6 @@
 import React from 'react';
-import './Loading.scss';
 
-const errorHandling = () => {
+const ErrorHandling = () => {
   return (
     <section className="404error">
       <h1>404 not found! Something went wrong.</h1>
@@ -9,4 +8,4 @@ const errorHandling = () => {
   )
 }
 
-export default errorHandling;
+export default ErrorHandling;
