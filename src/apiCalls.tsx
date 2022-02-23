@@ -1,5 +1,5 @@
 const getArtDetails = (category: string) => {
-  return fetch(`https://api.artic.edu/api/v1/artworks/search?q=${category}&fields=image_id,title,date_start,date_end,artist_title,thumbnail`)
+  return fetch(`https://api.artic.edu/api/v1/artworfjedhwijks/search?q=${category}&fields=image_id,title,date_start,date_end,artist_title,thumbnail`)
   .then(response => {
     if(!response.ok) {
       if(response.status >= 500) {
