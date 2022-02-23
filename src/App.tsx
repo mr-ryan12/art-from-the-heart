@@ -24,7 +24,7 @@ class App extends Component<{}, State> {
     if (this.state.categories.includes(input)) {
       return ( <ArtView category={input} />)
     } else {
-      return ( <ErrorHandling />)
+      return ( <ErrorHandling message='Ya blew it!'/>)
     }
   }
 
@@ -36,7 +36,7 @@ class App extends Component<{}, State> {
           <Switch>
             < Route exact path='/' render={() => <Categories categories={this.state.categories}/> }/>
             < Route exact path='/:category' render={({ match }) => this.checkCategory(match.params.category) } />
-            < Route render={() => <ErrorHandling /> } />
+            < Route render={() => <ErrorHandling message='Ya blew it!' /> } />
           </Switch>
         </main>
       </>

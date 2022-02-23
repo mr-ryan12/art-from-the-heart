@@ -5,6 +5,7 @@ import Loading from '../Loading/Loading';
 import './ArtView.scss';
 import thumbsUpIcon from '../thumbs-up.svg'
 import thumbsDownIcon from '../thumbs-down.svg'
+import ErrorHandling from '../404/404'
 
 interface State {
   userLikesPhoto: boolean | undefined;
@@ -21,6 +22,7 @@ interface State {
     classification_titles: Array<string>;
   }[];
   randomImageId: string;
+  error: string;
 }
 
 interface ImageDetails {
@@ -46,7 +48,8 @@ class ArtView extends Component<Props, State> {
       singlePiece: undefined,
       isLoading: true,
       artPieces: [],
-      randomImageId: ''
+      randomImageId: '',
+      error: ''
     }
   }
 
@@ -56,10 +59,10 @@ class ArtView extends Component<Props, State> {
         this.setState({
           isLoading: false,
           artPieces: data.data,
-          randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id
+          randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id,
         })
       })
-      .catch(error => console.log(error))
+      .catch(error => this.setState({error: error.message}))
   }
 
   getRandomIndex = (max: number) => {
@@ -70,9 +73,15 @@ class ArtView extends Component<Props, State> {
     const foundPiece = this.state.artPieces.find(piece => piece.image_id === this.state.randomImageId)
     this.setState({ userLikesPhoto: value, singlePiece: foundPiece })
   }
-  
-  render() {
-    const loading = this.state.isLoading ? <Loading /> : <><img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
+
+  checkError = () => {
+    if (this.state.error) {
+      return <ErrorHandling message={this.state.error}/>
+    } else if (this.state.isLoading) {
+      return <Loading />
+    } else {
+      return (
+        <><img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
     <div className="user-choices">
       <button className="ratings-choice" onClick={() => this.findPiece(true)}>
         <img src={thumbsUpIcon} alt="I like this art" />
@@ -84,9 +93,14 @@ class ArtView extends Component<Props, State> {
     <section className="image-details-container">
       {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
     </section></>
+      )
+    }
+  }
+  
+  render() {
     return(
       <div className="art-view-container">
-        {loading}
+        {this.checkError()}
       </div>
     )
   }
