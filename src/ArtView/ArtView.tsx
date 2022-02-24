@@ -81,7 +81,8 @@ class ArtView extends Component<Props, State> {
       return <Loading />
     } else {
       return (
-        <><img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
+    <>
+    <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
     <div className="user-choices">
       <button className="ratings-choice" onClick={() => this.findPiece(true)}>
         <img src={thumbsUpIcon} alt="I like this art" />
@@ -92,7 +93,8 @@ class ArtView extends Component<Props, State> {
     </div>
     <section className="image-details-container">
       {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
-    </section></>
+    </section>
+    </>
       )
     }
   }
