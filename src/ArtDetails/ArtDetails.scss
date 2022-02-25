@@ -1,3 +1,7 @@
+button {
+	font: inherit;
+}
+
 .art-details-container {
   display: flex;
   flex-direction: column;
@@ -21,7 +25,7 @@
 .generate-new-button {
   background-color: black;
   color: white;
-  height: 18%;
+  // height: 18%;
   width: 25%;
   padding: 30px;
   margin: 25px;
@@ -37,6 +41,7 @@
 .generate-new-button:hover {
   background-color: red;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .button-container {
