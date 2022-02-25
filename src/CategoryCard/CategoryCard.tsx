@@ -1,12 +1,9 @@
 import React from 'react'
 import './CategoryCard.scss'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { CategoryCardProps } from '../interface'
 
-interface Props {
-  category: string;
-}
-
-const CategoryCard: React.FC<Props> = props => {
+const CategoryCard: React.FC<CategoryCardProps> = props => {
   return (
     <Link className='category-card' to={`/${props.category}`} >
       <section>

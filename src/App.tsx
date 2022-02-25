@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
-import Categories from './Categories/Categories';
-import Navigation from './Navigation/Navigation';
-import './App.scss';
-import ArtView from './ArtView/ArtView';
-import { Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react'
+import Categories from './Categories/Categories'
+import Navigation from './Navigation/Navigation'
+import './App.scss'
+import ArtView from './ArtView/ArtView'
+import { Route, Switch } from 'react-router-dom'
 import ErrorHandling from './404/404'
+import { AppState } from './interface'
 
-interface State {
-  categories: Array<string>;
-}
-
-class App extends Component<{}, State> {
+class App extends Component<{}, AppState> {
   constructor(props: object) {
     super(props)
 

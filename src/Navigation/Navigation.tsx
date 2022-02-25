@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navigation.scss'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
 
 const Navigation = () => {
