@@ -39,7 +39,7 @@ const ArtDetails: React.FC<Props> = props => {
       </div>
       <div className='button-container'>
         <Link className='go-back-button' to={`/`} >Back To Main Page</Link>
-        <div onClick={ () => window.location.reload()} className='generate-new-button' >Show New Art Piece</div>
+        <button onClick={() => window.location.reload()} className='generate-new-button'>Show New Art Piece</button>
       </div>
     </section>
   )
