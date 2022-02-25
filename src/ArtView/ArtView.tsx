@@ -3,6 +3,7 @@ import { getArtDetails } from '../apiCalls'
 import ArtDetails from '../ArtDetails/ArtDetails'
 import Loading from '../Loading/Loading'
 import './ArtView.scss'
+import cleanImages from '../utils'
 // import thumbsUpIcon from '../thumbs-up.svg'
 // import thumbsDownIcon from '../thumbs-down.svg'
 import ErrorHandling from '../404/404'
@@ -34,7 +35,7 @@ interface ImageDetails {
   date_start: number;
   image_id: string;
   artist_title: string;
-  classification_titles: Array<string>;
+  // classification_titles: Array<string>;
 }
 
 interface Props {
@@ -60,7 +61,8 @@ class ArtView extends Component<Props, State> {
         this.setState({
           isLoading: false,
           artPieces: data.data,
-          randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id,
+          // randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id,
+          randomImageId: cleanImages(data.data)
         })
       })
       .catch(error => this.setState({error: error.message}))
