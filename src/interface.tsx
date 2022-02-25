@@ -78,3 +78,7 @@ export interface FeaturedArtProps {
   findPiece: (value: boolean) => void;
   userLikesPhoto: boolean | undefined;
 }
+
+export interface UserChoicesProps {
+  findPiece: (value: boolean) => void;
+}
