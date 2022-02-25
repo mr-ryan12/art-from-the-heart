@@ -3,15 +3,13 @@ import { getArtDetails } from '../apiCalls'
 import ArtDetails from '../ArtDetails/ArtDetails'
 import Loading from '../Loading/Loading'
 import './ArtView.scss'
-import cleanImages from '../utils'
-// import thumbsUpIcon from '../thumbs-up.svg'
-// import thumbsDownIcon from '../thumbs-down.svg'
+import { cleanImages, cleanImageDetails } from '../utils'
 import ErrorHandling from '../404/404'
 import FeaturedArt from '../FeaturedArt/FeaturedArt'
 
 interface State {
   userLikesPhoto: boolean | undefined;
-  singlePiece: ImageDetails | any;
+  singlePiece: undefined | ImageDetails | any;
   isLoading: boolean;
   artPieces: {
     id: number;
@@ -21,7 +19,6 @@ interface State {
     date_start: number;
     image_id: string;
     artist_title: string;
-    classification_titles: Array<string>;
   }[];
   randomImageId: string;
   error: string;
@@ -33,9 +30,15 @@ interface ImageDetails {
   description: string;
   title: string;
   date_start: number;
+  date_end: number;
   image_id: string;
   artist_title: string;
-  // classification_titles: Array<string>;
+  thumbnail: {
+    alt_text: string;
+    height: number;
+    lqip: string;
+    width: number;
+  }
 }
 
 interface Props {
@@ -61,7 +64,6 @@ class ArtView extends Component<Props, State> {
         this.setState({
           isLoading: false,
           artPieces: data.data,
-          // randomImageId: data.data[this.getRandomIndex(data.data.length)].image_id,
           randomImageId: cleanImages(data.data)
         })
       })
@@ -74,7 +76,7 @@ class ArtView extends Component<Props, State> {
 
   findPiece = (value: boolean) => {
     const foundPiece = this.state.artPieces.find(piece => piece.image_id === this.state.randomImageId)
-    this.setState({ userLikesPhoto: value, singlePiece: foundPiece })
+    this.setState({ userLikesPhoto: value, singlePiece: cleanImageDetails(foundPiece)})
   }
 
   checkError = () => {
@@ -84,21 +86,12 @@ class ArtView extends Component<Props, State> {
       return <Loading />
     } else {
       return (
-    <>
-      {/* <img className="featured-art" src={`https://www.artic.edu/iiif/2/${this.state.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
-      <div className="user-choices">
-        <button className="ratings-choice" onClick={() => this.findPiece(true)}>
-          <img src={thumbsUpIcon} alt="I like this art" />
-        </button>  
-        <button className="ratings-choice" onClick={() => this.findPiece(false)}>
-          <img src={thumbsDownIcon} alt="I don't like this art" />
-        </button>  
-      </div> */}
-      <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} />
-      <section className="image-details-container">
-        {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
-      </section>
-    </>
+        <>
+          <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} />
+          <section className="image-details-container">
+            {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
+          </section>
+        </>
       )
     }
   }

@@ -11,7 +11,7 @@ interface Props {
 const FeaturedArt: React.FC<Props> = props => {
   return (
     <>
-    <img className="featured-art" src={`https://www.artic.edu/iiif/2/${props.randomImageId}/full/843,/0/default.jpg`} alt="painting of people at a park on a sunny day" />
+    <img className="featured-art" src={`https://www.artic.edu/iiif/2/${props.randomImageId}/full/843,/0/default.jpg`} alt="beautiful artwork" />
       <div className="user-choices">
         <button className="ratings-choice" onClick={() => props.findPiece(true)}>
           <img src={thumbsUpIcon} alt="I like this art" />
