@@ -17,7 +17,6 @@ const Navigation = () => {
         </h1>
         <img src={heartIcon} alt="Art From The Heart" className="logo-icon" />
       </Link>
-
     </nav>
   )
 }
