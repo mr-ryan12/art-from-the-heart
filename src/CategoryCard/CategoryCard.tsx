@@ -9,7 +9,7 @@ interface Props {
 const CategoryCard: React.FC<Props> = props => {
   return (
     <Link className='category-card' to={`/${props.category}`} >
-      <section >
+      <section>
         <p>{props.category}</p>
       </section>
     </Link>

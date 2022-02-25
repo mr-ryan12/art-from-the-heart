@@ -70,13 +70,9 @@ class ArtView extends Component<Props, State> {
       .catch(error => this.setState({error: error.message}))
   }
 
-  getRandomIndex = (max: number) => {
-    return Math.floor(Math.random() * max);
-  }
-
   findPiece = (value: boolean) => {
     const foundPiece = this.state.artPieces.find(piece => piece.image_id === this.state.randomImageId)
-    this.setState({ userLikesPhoto: value, singlePiece: cleanImageDetails(foundPiece)})
+    this.setState({ userLikesPhoto: value, singlePiece: cleanImageDetails(foundPiece) })
   }
 
   checkError = () => {
