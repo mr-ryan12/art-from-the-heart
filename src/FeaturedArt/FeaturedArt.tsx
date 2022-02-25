@@ -1,7 +1,7 @@
 import React from 'react'
 import thumbsUpIcon from '../thumbs-up.svg'
 import thumbsDownIcon from '../thumbs-down.svg'
-import './FeaturedArt.scss'
+// import './FeaturedArt.scss'
 import { FeaturedArtProps } from '../interface'
 
 const FeaturedArt: React.FC<FeaturedArtProps> = props => {
