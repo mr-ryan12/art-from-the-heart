@@ -15,10 +15,6 @@ const getArtDetails = (category: string) => {
   })
 }
 
-// const cleanData = (data: Array<object>) => {
-//   const filterIncompleteData = data.filter(image => image.image_id !== null)
-// }
-
 export { getArtDetails }
 
 // Image Id's for removal
