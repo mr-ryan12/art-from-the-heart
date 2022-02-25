@@ -16,7 +16,7 @@ class App extends Component<{}, State> {
     super(props)
 
     this.state = {
-      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastels', 'chalk']  
+      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk']  
     }
   }
 
