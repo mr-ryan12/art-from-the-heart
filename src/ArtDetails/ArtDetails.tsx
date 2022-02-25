@@ -26,7 +26,7 @@ interface Details {
 
 const ArtDetails: React.FC<Props> = props => {
   const likedMessage = props.isLiked ? <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other voters liked this art! You have great taste!</p>
-                                    : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
+                                     : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
   return (
     <section className="art-details-container">
       <div className='main-details'>
@@ -38,8 +38,8 @@ const ArtDetails: React.FC<Props> = props => {
         {likedMessage}
       </div>
       <div className='button-container'>
-        <Link className='go-back-button' to={`/`} >Back To Main Page</Link>
-        <div onClick={ () => window.location.reload()} className='generate-new-button' >Show New Art Piece</div>
+        <Link className='go-back-button' to={`/`}>Back To Main Page</Link>
+        <button onClick={() => window.location.reload()} className='generate-new-button'>Show New Art Piece</button>
       </div>
     </section>
   )

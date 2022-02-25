@@ -23,4 +23,10 @@
   font-weight: 900;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, .25);
   cursor: pointer;
+  text-decoration: none;
+}
+
+.return-to-main:hover {
+  background-color: red;
+  transition: 0.2s;
 }

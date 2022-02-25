@@ -1,13 +1,9 @@
 const { createYield } = require("typescript")
 
-describe('check to see if it works', () => {
+describe('Main Page User Flow', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
   })
-
-  it('should confirm that true is equal to true', () => {
-    expect(true).to.equal(true)
-  }) 
 
   it('should display a page title', () => {
     cy.get('.logo').should('have.text', 'Art From TheHeart')
@@ -25,7 +21,4 @@ describe('check to see if it works', () => {
   it('Should be able to select a category', () => {
     cy.get('.category-card').first().click()
   })
-
-  
-
 })
