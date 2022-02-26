@@ -1,20 +1,40 @@
+@import "src/variables";
+
+.main-page-container {
+  padding: 20px;
+}
+
 .categories-container {
-  display: flex;
-  align-items: center;
+  @include flexbox-center-center;
   justify-content:space-around;
   flex-wrap: wrap;
-  text-align: center;
   padding: 25px;
+  margin: 0px;
 }
 
 .welcome-message {
-  margin: 2% 0 2% 0;
+  margin: 2% 0 0 0;
   text-align: center;
+  font-size: 25px;
+}
+
+.title {
   font-size: 30px;
+  margin: 20px;
+}
+
+.luck {
+  margin: 20px 0px 0px 0px;
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .categories-container {
     padding: 15px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .welcome-message {
+    font-size: 15px;
   }
 }

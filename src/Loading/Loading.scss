@@ -1,6 +1,7 @@
+@import "src/variables";
+
 .loading-container {
-  display: flex;
-  align-items: center;
+  @include flexbox-center-center;
   height: 50vh;
 }
 

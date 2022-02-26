@@ -1,13 +1,13 @@
+@import "src/variables";
+
 .art-view-container {
   padding: 20px;
-  display: flex;
+  @include flexbox-center-center;
   flex-direction: column;
-  align-items: center;
 }
 
 .user-choices {
-  display: flex;
-  justify-content: center;
+  @include flexbox-center-center;
 }
 
 .featured-art {
@@ -15,23 +15,28 @@
   max-height: 60vh;
   position: relative;
   text-align: center;
-  color: white;
+  color: $primary-color;
 }
 
-.ratings-choice:hover {
+.ratings-choice:hover,
+.ratings-choice:focus {
   background-color: red;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .ratings-choice {
-  background-color: black;
+  background-color: $secondary-color;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   margin: 20px;
   font-size: 50px;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, .25);
+  box-shadow: $shadow;
   display: flex;
+}
+
+.icon{
+  filter:invert($invert-icon-amount);
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
