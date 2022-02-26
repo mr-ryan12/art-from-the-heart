@@ -13,8 +13,19 @@
   font-size: 30px;
 }
 
+.title {
+  font-size: 25px;
+  margin: 20px;
+}
+
+.luck {
+  margin: 20px;
+}
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .categories-container {
     padding: 15px;
+  }
+  .welcome-message {
+    font-size: 15px;
   }
 }
