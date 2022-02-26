@@ -1,6 +1,8 @@
+@import "src/variables";
+
 .navigation-bar {
-  background-color: black;
-  color: white;
+  background-color: $secondary-color;
+  color: $primary-color;
   font-size: 30px;
   padding: 20px;
   border-bottom: 5px solid red;
@@ -13,7 +15,7 @@
 }
 
 .art-from-the {
-  color: white;
+  color: $primary-color;
 }
 
 .logo-accent {

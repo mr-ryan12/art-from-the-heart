@@ -13,9 +13,9 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #000000BB;
+  background-color: $art-details-modal-color;
   padding: 20px;
-  color: #FFF;
+  color: $primary-color;
   border-radius: $border-radius;
   width: 65%;
   height: 70%;
@@ -27,8 +27,8 @@ button {
 .go-back-button,
 .generate-new-button {
   @include flexbox-center-center;
-  background-color: black;
-  color: white;
+  background-color: $secondary-color;
+  color: $primary-color;
   width: 300px;
   padding: 30px;
   margin: 25px;
@@ -59,8 +59,8 @@ button {
 .main-details {
   overflow-y: auto;
   width: 90%;
-  background-color: #FFF;
-  color: #000;
+  background-color: $primary-color;
+  color: $secondary-color;
   border-radius: $border-radius;
   padding: 2%;
   font-size: 20px;

@@ -15,7 +15,7 @@
   max-height: 60vh;
   position: relative;
   text-align: center;
-  color: white;
+  color: $primary-color;
 }
 
 .ratings-choice:hover,
@@ -25,13 +25,17 @@
   transition: 0.2s;
 }
 .ratings-choice {
-  background-color: black;
+  background-color: $secondary-color;
   padding: 20px;
   border-radius: $border-radius;
   margin: 20px;
   font-size: 50px;
   box-shadow: $shadow;
   display: flex;
+}
+
+.icon{
+  filter:invert($invert-icon-amount);
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {

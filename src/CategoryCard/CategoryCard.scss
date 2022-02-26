@@ -2,9 +2,9 @@
 
 .category-card {
   @include flexbox-center-center;
-  background-color: black;
+  background-color: $secondary-color;
   text-decoration: none;
-  color: white;
+  color: $primary-color;
   height: 36%;
   width: 30%;
   padding: 30px;
