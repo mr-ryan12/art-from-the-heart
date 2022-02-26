@@ -1,5 +1,7 @@
 export interface AppState {
   categories: Array<string>;
+  darkMode: string;
+  isDarkModeOn: boolean;
 }
 
 export interface CategoriesProps {

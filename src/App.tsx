@@ -12,7 +12,9 @@ class App extends Component<{}, AppState> {
     super(props)
 
     this.state = {
-      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk']  
+      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk'],
+      darkMode: '',
+      isDarkModeOn: false
     }
   }
 
@@ -24,10 +26,24 @@ class App extends Component<{}, AppState> {
     }
   }
 
+  toggleDarkMode = () => {
+    if (this.state.isDarkModeOn) {
+      this.setState({
+        isDarkModeOn: false,
+        darkMode: ''
+      })
+    } else {
+      this.setState({
+        isDarkModeOn: true,
+        darkMode: '-dark'
+      })
+    }
+  }
+
   render() {
     return (
       <>
-        <Navigation />
+        <Navigation darkMode={this.state.darkMode} toggleDarkMode={this.toggleDarkMode}/>
         <main className="App">
           <Switch>
             <Route exact path='/' render={() => <Categories categories={this.state.categories}/>} />

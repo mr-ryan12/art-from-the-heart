@@ -1,15 +1,27 @@
 @import "src/variables";
 
 .navigation-bar {
-  background-color: $primary-color;
-  color: $primary-color;
-  border-bottom: 5px solid red;
-  display: flex;
+  @include navigation-bar($primary-color)
+}
+
+.navigation-bar-dark {
+  @include navigation-bar($primary-color-dark)
 }
 
 .behind-logo {
   background-color: $secondary-color;
   color: $primary-color;
+  font-size: 30px;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 66%;
+  margin: 0px;
+}
+
+.behind-logo-dark {
+  background-color: $secondary-color-dark;
+  color: $primary-color-dark;
   font-size: 30px;
   padding: 20px;
   display: flex;
@@ -27,6 +39,15 @@
   display: inline-block;
 }
 
+.angled-end-dark {
+  position: absolute;
+  left: calc(66% + 40px);
+  border-bottom: 110px solid transparent;
+  border-left: 110px solid $secondary-color-dark;
+  top: 0px;
+  display: inline-block;
+}
+
 .title-link {
   text-decoration: none;
   display: flex;
@@ -34,6 +55,10 @@
 
 .art-from-the {
   color: $primary-color;
+}
+
+.art-from-the-dark {
+  color: $primary-color-dark;
 }
 
 .logo-accent {
