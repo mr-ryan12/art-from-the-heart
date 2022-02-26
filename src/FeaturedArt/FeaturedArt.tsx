@@ -1,7 +1,6 @@
 import React from 'react'
 import thumbsUpIcon from '../thumbs-up.svg'
 import thumbsDownIcon from '../thumbs-down.svg'
-import './FeaturedArt.scss'
 
 interface Props {
   randomImageId: string;

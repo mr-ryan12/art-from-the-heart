@@ -1,4 +1,7 @@
+@import "src/variables";
+
 .category-card {
+  @include flexbox-center-center;
   background-color: black;
   text-decoration: none;
   color: white;
@@ -6,10 +9,10 @@
   width: 30%;
   padding: 30px;
   margin: 25px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   text-transform: uppercase;
   font-weight: 900;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, .25);
+  box-shadow: $shadow;
   cursor: pointer;
 }
 
@@ -19,8 +22,6 @@
   cursor: pointer;
   transition: 0.2s;
 }
-
-
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .category-card {
