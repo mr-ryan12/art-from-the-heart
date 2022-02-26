@@ -26,7 +26,8 @@
   text-decoration: none;
 }
 
-.return-to-main:hover {
+.return-to-main:hover,
+.return-to-main:focus {
   background-color: red;
   transition: 0.2s;
 }

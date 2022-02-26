@@ -1,3 +1,6 @@
+.main-page-container {
+  padding: 20px;
+}
 .categories-container {
   display: flex;
   align-items: center;
@@ -21,9 +24,13 @@
 .luck {
   margin: 20px;
 }
+
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .categories-container {
     padding: 15px;
+  }
+  .title {
+    font-size: 20px;
   }
   .welcome-message {
     font-size: 15px;

@@ -18,7 +18,8 @@
   color: white;
 }
 
-.ratings-choice:hover {
+.ratings-choice:hover,
+.ratings-choice:focus {
   background-color: red;
   cursor: pointer;
   transition: 0.2s;
