@@ -1,9 +1,9 @@
+@import "src/variables";
+
 .error {
+  @include flexbox-center-center;
   margin: 35px;
   height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -13,20 +13,21 @@
 }
 
 .return-to-main {
-  background-color: black;
-  color: white;
+  background-color: $secondary-color;
+  color: $primary-color;
   height: 36%;
   padding: 30px;
   margin: 25px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   text-transform: uppercase;
   font-weight: 900;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, .25);
+  box-shadow: $shadow;
   cursor: pointer;
   text-decoration: none;
 }
 
-.return-to-main:hover {
+.return-to-main:hover,
+.return-to-main:focus {
   background-color: red;
   transition: 0.2s;
 }
