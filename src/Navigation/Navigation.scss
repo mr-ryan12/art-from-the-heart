@@ -1,12 +1,30 @@
 @import "src/variables";
 
 .navigation-bar {
+  background-color: $primary-color;
+  color: $primary-color;
+  border-bottom: 5px solid red;
+  display: flex;
+}
+
+.behind-logo {
   background-color: $secondary-color;
   color: $primary-color;
   font-size: 30px;
   padding: 20px;
-  border-bottom: 5px solid red;
   display: flex;
+  width: 100%;
+  max-width: 66%;
+  margin: 0px;
+}
+
+.angled-end {
+  position: absolute;
+  left: calc(66% + 40px);
+  border-bottom: 110px solid transparent;
+  border-left: 110px solid $secondary-color;
+  top: 0px;
+  display: inline-block;
 }
 
 .title-link {
@@ -30,6 +48,10 @@
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .navigation-bar {
     justify-content: center;
+    background-color: $secondary-color;
+  }
+  .triangle-end {
+    display: none;
   }
 }
 
