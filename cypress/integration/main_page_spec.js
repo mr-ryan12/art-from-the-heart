@@ -14,8 +14,8 @@ describe('Main Page User Flow', () => {
   })
 
   it('should display a page welcome message', () => {
-    cy.get('.welcome-message')
-      .should('have.text', 'Welcome to Art From the Heart!Test your skills by rating art and seeing how you compare to the community!Detailed information about an art piece is only revealed after you rate to avoid impacting your vote.Good luck!')
+    cy.get('.title')
+      .should('have.text', 'Welcome to Art From the Heart!')
   })
 
   it('Should be able to select a category', () => {
