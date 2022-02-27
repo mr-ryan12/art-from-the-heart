@@ -14,17 +14,11 @@
 }
 
 .return-to-main {
-  background-color: $secondary-color;
-  color: $primary-color;
-  height: 36%;
-  padding: 30px;
-  margin: 25px;
-  border-radius: $border-radius;
-  text-transform: uppercase;
-  font-weight: 900;
-  box-shadow: $shadow;
-  cursor: pointer;
-  text-decoration: none;
+  @include error-page($primary-color, $secondary-color, $border-radius, $shadow)
+}
+
+.return-to-main-dark {
+  @include error-page($primary-color-dark, $secondary-color-dark, $border-radius, $shadow-dark)
 }
 
 .return-to-main:hover,

@@ -22,7 +22,7 @@ class App extends Component<{}, AppState> {
     if (this.state.categories.includes(input)) {
       return ( <ArtView category={input} darkMode={this.state.darkMode}/>)
     } else {
-      return ( <ErrorHandling message='Sorry, that page is not found.'/>)
+      return ( <ErrorHandling message='Sorry, that page is not found.' darkMode={this.state.darkMode}/>)
     }
   }
 
@@ -52,7 +52,7 @@ class App extends Component<{}, AppState> {
           <Switch>
             <Route exact path='/' render={() => <Categories categories={this.state.categories} darkMode={this.state.darkMode}/>} />
             <Route exact path='/:category' render={({ match }) => this.checkCategory(match.params.category)} />
-            <Route render={() => <ErrorHandling message='Sorry, that page is not found.' />} />
+            <Route render={() => <ErrorHandling message='Sorry, that page is not found.' darkMode={this.state.darkMode}/>} />
           </Switch>
         </main>
       </>

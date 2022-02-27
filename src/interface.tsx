@@ -16,6 +16,7 @@ export interface CategoryCardProps {
 
 export interface ErrorHandlingProps {
   message: string;
+  darkMode: string;
 }
 
 export interface ArtDetailsProps {

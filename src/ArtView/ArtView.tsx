@@ -40,7 +40,7 @@ class ArtView extends Component<ArtViewProps, ArtViewState> {
 
   checkError = () => {
     if (this.state.error) {
-      return <ErrorHandling message={this.state.error}/>
+      return <ErrorHandling message={this.state.error} darkMode={this.props.darkMode}/>
     } else if (this.state.isLoading) {
       return <Loading />
     } else {

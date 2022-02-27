@@ -118,3 +118,17 @@
     transition: 0.2s;
   }
 }
+
+@mixin error-page($primaryColor, $secondaryColor, $borderRadius, $shadow) {
+  background-color: $secondaryColor;
+  color: $primaryColor;
+  height: 36%;
+  padding: 30px;
+  margin: 25px;
+  border-radius: $borderRadius;
+  text-transform: uppercase;
+  font-weight: 900;
+  box-shadow: $shadow;
+  cursor: pointer;
+  text-decoration: none;
+}
