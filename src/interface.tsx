@@ -5,6 +5,7 @@ export interface AppState {
 }
 
 export interface NavProps {
+  isDarkModeOn: boolean;
   darkMode: string | null;
   toggleDarkMode: () => void;
 }
