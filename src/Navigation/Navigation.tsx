@@ -3,11 +3,7 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
 import sunIcon from '../sun.svg'
-
-interface NavProps {
-  darkMode: string | null;
-  toggleDarkMode: () => void;
-}
+import { NavProps } from '../interface'
 
 const Navigation: React.FC<NavProps> = props => {
   return (
