@@ -2,10 +2,13 @@ import React from 'react'
 import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
+import moonIcon from '../moon.svg'
 import sunIcon from '../sun.svg'
 import { NavProps } from '../interface'
 
 const Navigation: React.FC<NavProps> = props => {
+  const changeIcon = props.isDarkModeOn? <img src={sunIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/> : 
+  <img src={moonIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/>
   return (
     <>
     <nav className={"navigation-bar" + props.darkMode}>
@@ -25,7 +28,7 @@ const Navigation: React.FC<NavProps> = props => {
       <div className={"angled-end" + props.darkMode}>
       </div>
       <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">
-        <img src={sunIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/>
+        {changeIcon}
       </button>
     </nav>
     </>
