@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
 import moonIcon from '../moon.svg'
 import sunIcon from '../sun.svg'
+import { motion } from "framer-motion"
 import { NavProps } from '../interface'
 
 const Navigation: React.FC<NavProps> = props => {
@@ -22,7 +23,11 @@ const Navigation: React.FC<NavProps> = props => {
               Heart
             </div>
           </h1>
-          <img src={heartIcon} alt="Art From The Heart" className="logo-icon" />
+          <motion.img 
+          src={heartIcon} alt="Art From The Heart" 
+          className="logo-icon" 
+          animate={{ rotate: [-360, 20] }}
+          />
         </Link>
       </div>
       <div className={"angled-end" + props.darkMode}>
