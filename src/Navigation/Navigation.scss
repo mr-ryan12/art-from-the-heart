@@ -47,6 +47,12 @@
   margin: 0px 15px;
 }
 
+.dark-mode-button {
+  font-size: 2.9vh;
+  background: none;
+  cursor: pointer;
+}
+
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .navigation-bar {
     justify-content: center;

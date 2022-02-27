@@ -29,7 +29,7 @@ const Navigation: React.FC<NavProps> = props => {
 
       </div>
     </nav>
-    <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">dark mode</button>
+    <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">💡</button>
     </>
   )
 }
