@@ -1,4 +1,5 @@
 @import "src/variables";
+@import "src/_mixins";
 
 .category-card {
   @include flexbox-center-center;

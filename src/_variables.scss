@@ -1,16 +1,3 @@
-@mixin flexbox-center-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin navigation-bar($primaryColor) {
-  background-color: $primaryColor;
-  color: $primaryColor;
-  border-bottom: 5px solid red;
-  display: flex;
-}
-
 $border-radius: 5px;
 $shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
 $primary-color: #fff;
@@ -20,7 +7,7 @@ $art-details-modal-color: #000000BB;
 
 //For Dark Mode, use the following settings:
 // $shadow: 5px 5px 0px rgba(255, 255, 255, 0.4);
- $primary-color-dark: #000;
+$primary-color-dark: #000;
 $secondary-color-dark: #fff;
 // $invert-icon-amount: 1;
 // $art-details-modal-color: #FFFFFF66;
