@@ -13,8 +13,18 @@ class App extends Component<{}, AppState> {
 
     this.state = {
       categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk'],
-      darkMode: '',
+      darkMode: localStorage.length === 0 ? '' : localStorage.getItem('dark-mode'),
       isDarkModeOn: false
+    }
+  }
+
+  componentDidMount = () => {
+    if (localStorage.getItem('dark-mode') === '') {
+      document.body.style.backgroundColor = '#FFF'
+      document.body.style.color = '#000'
+    } else if (localStorage.getItem('dark-mode') === '-dark') {
+      document.body.style.backgroundColor = '#000'
+      document.body.style.color = '#FFF'
     }
   }
 
@@ -27,20 +37,22 @@ class App extends Component<{}, AppState> {
   }
 
   toggleDarkMode = () => {
-    if (this.state.isDarkModeOn) {
-      this.setState({
-        isDarkModeOn: false,
-        darkMode: ''
-      })
+    if (localStorage.getItem('dark-mode') === '-dark') {
+      localStorage.setItem('dark-mode', '')
       document.body.style.backgroundColor = '#FFF'
       document.body.style.color = '#000'
-    } else {
       this.setState({
-        isDarkModeOn: true,
-        darkMode: '-dark'
+        isDarkModeOn: false,
+        darkMode: localStorage.getItem('dark-mode')
       })
+    } else {
+      localStorage.setItem('dark-mode', '-dark')
       document.body.style.backgroundColor = '#000'
       document.body.style.color = '#FFF'
+      this.setState({
+        isDarkModeOn: true,
+        darkMode: localStorage.getItem('dark-mode')
+      })
     }
   }
 

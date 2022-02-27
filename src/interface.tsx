@@ -1,28 +1,28 @@
 export interface AppState {
   categories: Array<string>;
-  darkMode: string;
+  darkMode: string | null;
   isDarkModeOn: boolean;
 }
 
 export interface CategoriesProps {
   categories: Array<string>;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 export interface CategoryCardProps {
   category: string;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 export interface ErrorHandlingProps {
   message: string;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 export interface ArtDetailsProps {
   artDetails: ArtDetails;
   isLiked: boolean | undefined;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 interface ArtDetails {
@@ -77,17 +77,17 @@ interface ArtViewImageDetails {
 
 export interface ArtViewProps {
   category: string;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 export interface FeaturedArtProps {
   randomImageId: string;
   findPiece: (value: boolean) => void;
   userLikesPhoto: boolean | undefined;
-  darkMode: string;
+  darkMode: string | null;
 }
 
 export interface UserChoicesProps {
   findPiece: (value: boolean) => void;
-  darkMode: string;
+  darkMode: string | null;
 }

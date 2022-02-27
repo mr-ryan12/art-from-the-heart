@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
 
 interface NavProps {
-  darkMode: string;
+  darkMode: string | null;
   toggleDarkMode: () => void;
 }
 

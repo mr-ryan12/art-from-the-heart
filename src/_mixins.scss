@@ -131,4 +131,8 @@
   box-shadow: $shadow;
   cursor: pointer;
   text-decoration: none;
+  &:hover {
+    background-color: red;
+    transition: 0.2s;
+  }
 }
