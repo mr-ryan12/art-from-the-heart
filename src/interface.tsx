@@ -6,10 +6,12 @@ export interface AppState {
 
 export interface CategoriesProps {
   categories: Array<string>;
+  darkMode: string;
 }
 
 export interface CategoryCardProps {
   category: string;
+  darkMode: string;
 }
 
 export interface ErrorHandlingProps {

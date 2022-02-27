@@ -32,11 +32,15 @@ class App extends Component<{}, AppState> {
         isDarkModeOn: false,
         darkMode: ''
       })
+      document.body.style.backgroundColor = '#FFF'
+      document.body.style.color = '#000'
     } else {
       this.setState({
         isDarkModeOn: true,
         darkMode: '-dark'
       })
+      document.body.style.backgroundColor = '#000'
+      document.body.style.color = '#FFF'
     }
   }
 
@@ -46,7 +50,7 @@ class App extends Component<{}, AppState> {
         <Navigation darkMode={this.state.darkMode} toggleDarkMode={this.toggleDarkMode}/>
         <main className="App">
           <Switch>
-            <Route exact path='/' render={() => <Categories categories={this.state.categories}/>} />
+            <Route exact path='/' render={() => <Categories categories={this.state.categories} darkMode={this.state.darkMode}/>} />
             <Route exact path='/:category' render={({ match }) => this.checkCategory(match.params.category)} />
             <Route render={() => <ErrorHandling message='Sorry, that page is not found.' />} />
           </Switch>

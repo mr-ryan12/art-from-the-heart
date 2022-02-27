@@ -6,7 +6,7 @@ import './Categories.scss'
 const Categories: React.FC<CategoriesProps> = props => {
   const allCategories = props.categories.map(category => {
     return (
-      <CategoryCard key={category} category={category} />
+      <CategoryCard key={category} category={category} darkMode={props.darkMode}/>
     )
   })
   

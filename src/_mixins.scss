@@ -34,3 +34,25 @@
 @mixin art-from-the($color) {
   color: $color;
 }
+
+@mixin category-card($primaryColor, $secondaryColor, $borderRadius, $shadow) {
+  background-color: $secondaryColor;
+  text-decoration: none;
+  color: $primaryColor;
+  height: 36%;
+  width: 30%;
+  padding: 30px;
+  margin: 25px;
+  border-radius: $borderRadius;
+  text-transform: uppercase;
+  font-weight: 900;
+  box-shadow: $shadow;
+  cursor: pointer;
+}
+
+// @mixin body-dark($primaryColor, $secondaryColor) {
+//   body {
+//     background-color: $primaryColor;
+// 	  color: $secondaryColor;
+//   }
+// }
