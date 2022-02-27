@@ -59,7 +59,7 @@ class App extends Component<{}, AppState> {
   render() {
     return (
       <>
-        <Navigation darkMode={this.state.darkMode} toggleDarkMode={this.toggleDarkMode}/>
+        <Navigation darkMode={this.state.darkMode} toggleDarkMode={this.toggleDarkMode} isDarkModeOn={this.state.isDarkModeOn}/>
         <main className="App">
           <Switch>
             <Route exact path='/' render={() => <Categories categories={this.state.categories} darkMode={this.state.darkMode}/>} />
