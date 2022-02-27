@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom'
 import { ArtDetailsProps } from '../interface'
 
 const ArtDetails: React.FC<ArtDetailsProps> = props => {
-  // const likedMessage = props.isLiked ? <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other voters liked this art! You have great taste!</p>
-  //                                    : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
-  const likedMessage = props.isLiked ? <p className="percent-message">You and 44% of other voters liked this art! You have great taste!</p>
-                                     : <p className="percent-message">You and 50% of other people agree! Congratulations!</p>
+  const likedMessage = props.isLiked ? <p className="percent-message">You have great taste!</p>
+                                     : <p className="percent-message">You have amazing taste!</p>
   return (
     <section className={"art-details-container" + props.darkMode}>
       <div className={"main-details" + props.darkMode}>
