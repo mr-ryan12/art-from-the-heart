@@ -20,7 +20,7 @@ class App extends Component<{}, AppState> {
 
   checkCategory = (input: string) => {
     if (this.state.categories.includes(input)) {
-      return ( <ArtView category={input} />)
+      return ( <ArtView category={input} darkMode={this.state.darkMode}/>)
     } else {
       return ( <ErrorHandling message='Sorry, that page is not found.'/>)
     }

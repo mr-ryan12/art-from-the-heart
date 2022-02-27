@@ -21,6 +21,7 @@ export interface ErrorHandlingProps {
 export interface ArtDetailsProps {
   artDetails: ArtDetails;
   isLiked: boolean | undefined;
+  darkMode: string;
 }
 
 interface ArtDetails {
@@ -75,14 +76,17 @@ interface ArtViewImageDetails {
 
 export interface ArtViewProps {
   category: string;
+  darkMode: string;
 }
 
 export interface FeaturedArtProps {
   randomImageId: string;
   findPiece: (value: boolean) => void;
   userLikesPhoto: boolean | undefined;
+  darkMode: string;
 }
 
 export interface UserChoicesProps {
   findPiece: (value: boolean) => void;
+  darkMode: string;
 }

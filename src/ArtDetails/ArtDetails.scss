@@ -7,39 +7,23 @@ button {
 }
 
 .art-details-container {
-  position: absolute;
-  @include flexbox-center-center;
-  flex-direction: column;
-  justify-content:space-between;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: $art-details-modal-color;
-  padding: 20px;
-  color: $primary-color;
-  border-radius: $border-radius;
-  width: 65%;
-  height: 70%;
-  margin-top: 5%;
-  font-size: 30px;
-  overflow-y: auto;
+  @include art-details-container($art-details-modal-color, $primary-color, $border-radius);
+}
+
+.art-details-container-dark {
+  @include art-details-container($art-details-modal-color-dark, $primary-color-dark, $border-radius);
 }
 
 .go-back-button,
 .generate-new-button {
   @include flexbox-center-center;
-  background-color: $secondary-color;
-  color: $primary-color;
-  width: 300px;
-  padding: 30px;
-  margin: 25px;
-  border-radius: $border-radius;
-  text-transform: uppercase;
-  font-weight: 900;
-  box-shadow: $shadow;
-  text-decoration: none;
-  box-sizing: border-box;
-  cursor: pointer;
+  @include main-details-buttons($primary-color, $secondary-color, $border-radius, $shadow);
+}
+
+.go-back-button-dark,
+.generate-new-button-dark {
+  @include flexbox-center-center;
+  @include main-details-buttons($primary-color-dark, $secondary-color-dark, $border-radius, $shadow);
 }
 
 .go-back-button:hover,
@@ -58,14 +42,11 @@ button {
 }
 
 .main-details {
-  overflow-y: auto;
-  width: 90%;
-  background-color: $primary-color;
-  color: $secondary-color;
-  border-radius: $border-radius;
-  padding: 2%;
-  font-size: 20px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .25);
+  @include main-details($primary-color, $secondary-color, $border-radius)
+}
+
+.main-details-dark {
+  @include main-details($primary-color-dark, $secondary-color-dark, $border-radius)
 }
 
 .art-details-title,
@@ -88,6 +69,12 @@ button {
     top: 50%;
   }
 
+  .art-details-container-dark {
+    width: 75%;
+    height: 50%;
+    top: 50%;
+  }
+
   .button-container {
     display: flex;
     width: 90%;
@@ -101,7 +88,21 @@ button {
     font-size: 15px;
   }
 
+  .go-back-button-dark,
+  .generate-new-button-dark {
+    max-width: 350px;
+    padding: 20px;
+    margin: 20px 10px;
+    font-size: 15px;
+  }
+
   .main-details {
+    height: 70%;
+    width: 90%;
+    padding: 5%;
+  }
+
+  .main-details-dark {
     height: 70%;
     width: 90%;
     padding: 5%;
@@ -110,6 +111,12 @@ button {
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
   .art-details-container {
+    width: 75%;
+    height: 75%;
+    top: 55%;
+  }
+
+  .art-details-container-dark {
     width: 75%;
     height: 75%;
     top: 55%;
@@ -131,7 +138,21 @@ button {
     font-size: 15px;
   }
 
+  .go-back-button-dark,
+  .generate-new-button-dark {
+    max-width: 350px;
+    padding: 20px;
+    margin: 20px 10px 0px 10px;
+    font-size: 15px;
+  }
+
   .main-details {
+    height: 70%;
+    width: 90%;
+    padding: 5%;
+  }
+
+  .main-details-dark {
     height: 70%;
     width: 90%;
     padding: 5%;
