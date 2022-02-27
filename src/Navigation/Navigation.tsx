@@ -2,11 +2,8 @@ import React from 'react'
 import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
-
-interface NavProps {
-  darkMode: string | null;
-  toggleDarkMode: () => void;
-}
+import sunIcon from '../sun.svg'
+import { NavProps } from '../interface'
 
 const Navigation: React.FC<NavProps> = props => {
   return (
@@ -26,10 +23,11 @@ const Navigation: React.FC<NavProps> = props => {
         </Link>
       </div>
       <div className={"angled-end" + props.darkMode}>
-
       </div>
+      <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">
+        <img src={sunIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/>
+      </button>
     </nav>
-    <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">💡</button>
     </>
   )
 }

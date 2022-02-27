@@ -4,6 +4,11 @@ export interface AppState {
   isDarkModeOn: boolean;
 }
 
+export interface NavProps {
+  darkMode: string | null;
+  toggleDarkMode: () => void;
+}
+
 export interface CategoriesProps {
   categories: Array<string>;
   darkMode: string | null;
