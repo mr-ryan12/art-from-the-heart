@@ -46,7 +46,7 @@ class ArtView extends Component<ArtViewProps, ArtViewState> {
     } else {
       return (
         <>
-          <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} userLikesPhoto={this.state.userLikesPhoto}/>
+          <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} userLikesPhoto={this.state.userLikesPhoto} />
           <section className="image-details-container">
             {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
           </section>
