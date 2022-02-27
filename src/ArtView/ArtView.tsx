@@ -40,15 +40,15 @@ class ArtView extends Component<ArtViewProps, ArtViewState> {
 
   checkError = () => {
     if (this.state.error) {
-      return <ErrorHandling message={this.state.error}/>
+      return <ErrorHandling message={this.state.error} darkMode={this.props.darkMode}/>
     } else if (this.state.isLoading) {
       return <Loading />
     } else {
       return (
         <>
-          <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} userLikesPhoto={this.state.userLikesPhoto} />
+          <FeaturedArt randomImageId={this.state.randomImageId} findPiece={this.findPiece} userLikesPhoto={this.state.userLikesPhoto} darkMode={this.props.darkMode}/>
           <section className="image-details-container">
-            {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto}/> : null}
+            {this.state.singlePiece ? <ArtDetails artDetails={this.state.singlePiece} isLiked={this.state.userLikesPhoto} darkMode={this.props.darkMode}/> : null}
           </section>
         </>
       )

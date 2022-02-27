@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import heartIcon from '../logo-heart-icon.png'
 
 interface NavProps {
-  darkMode: string;
+  darkMode: string | null;
   toggleDarkMode: () => void;
 }
 
@@ -29,7 +29,7 @@ const Navigation: React.FC<NavProps> = props => {
 
       </div>
     </nav>
-    <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">dark mode</button>
+    <button onClick={() => props.toggleDarkMode()} className="dark-mode-button">💡</button>
     </>
   )
 }
