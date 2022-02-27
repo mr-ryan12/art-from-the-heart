@@ -19,7 +19,7 @@ const Categories: React.FC<CategoriesProps> = props => {
     >
       <section className="welcome-message">
         <h2 className="title">Welcome to Art From the Heart!</h2>
-        <p>Test your skills by rating art and seeing how you compare to the community! Detailed information about an art piece is only revealed after you rate to avoid impacting your vote.</p>
+        <p className='site-description'>Test your skills by rating art and seeing how you compare to the community! Detailed information about an art piece is only revealed after you rate to avoid impacting your vote.</p>
         <p className="luck">Good luck!</p>
       </section>
       <section className="categories-container">
