@@ -52,8 +52,8 @@
   background: none;
   cursor: pointer;
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
@@ -76,6 +76,7 @@
   }
   .dark-mode-button {
     top: 40px;
+    filter: invert(1)
   }
 }
 
