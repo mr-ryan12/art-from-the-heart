@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import Categories from './Categories/Categories';
-import Navigation from './Navigation/Navigation';
-import './App.scss';
-import ArtView from './ArtView/ArtView';
-import { Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react'
+import Categories from './Categories/Categories'
+import Navigation from './Navigation/Navigation'
+import './App.scss'
+import ArtView from './ArtView/ArtView'
+import { Route, Switch } from 'react-router-dom'
 import ErrorHandling from './404/404'
+import { AppState } from './interface'
 
-interface State {
-  categories: Array<string>;
-}
-
-class App extends Component<{}, State> {
+class App extends Component<{}, AppState> {
   constructor(props: object) {
     super(props)
 
     this.state = {
-      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk']  
+      categories: ['photography', 'watercolor', 'painting', 'oil painting', 'sculpture', 'pencil', 'pastel', 'chalk'],
+      darkMode: '',
+      isDarkModeOn: false
     }
   }
 
@@ -27,10 +26,24 @@ class App extends Component<{}, State> {
     }
   }
 
+  toggleDarkMode = () => {
+    if (this.state.isDarkModeOn) {
+      this.setState({
+        isDarkModeOn: false,
+        darkMode: ''
+      })
+    } else {
+      this.setState({
+        isDarkModeOn: true,
+        darkMode: '-dark'
+      })
+    }
+  }
+
   render() {
     return (
       <>
-        <Navigation />
+        <Navigation darkMode={this.state.darkMode} toggleDarkMode={this.toggleDarkMode}/>
         <main className="App">
           <Switch>
             <Route exact path='/' render={() => <Categories categories={this.state.categories}/>} />

@@ -2,29 +2,9 @@ import React from 'react';
 import './ArtDetails.scss';
 import '../ArtView/ArtView.scss';
 import { Link } from 'react-router-dom'
+import { ArtDetailsProps } from '../interface';
 
-interface Props {
-  artDetails: Details;
-  isLiked: boolean | undefined;
-}
-
-interface Details {
-  id: number;
-  _score: number;
-  thumbnail: {
-    alt_text: string;
-    width: number;
-    lqip: string;
-    height: number;
-  };
-  date_start: number;
-  date_end: number;
-  title: string;
-  image_id: string;
-  artist_title: string;
-}
-
-const ArtDetails: React.FC<Props> = props => {
+const ArtDetails: React.FC<ArtDetailsProps> = props => {
   const likedMessage = props.isLiked ? <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other voters liked this art! You have great taste!</p>
                                      : <p className="percent-message">You and {Math.floor(Math.random() * 100) + 1 + '%'} of other people agree! Congratulations!</p>
   return (

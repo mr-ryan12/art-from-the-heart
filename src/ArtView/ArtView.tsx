@@ -4,49 +4,12 @@ import ArtDetails from '../ArtDetails/ArtDetails'
 import Loading from '../Loading/Loading'
 import './ArtView.scss'
 import { cleanImages, cleanImageDetails } from '../utils'
+import { ArtViewProps, ArtViewState } from '../interface'
 import ErrorHandling from '../404/404'
 import FeaturedArt from '../FeaturedArt/FeaturedArt'
 
-interface State {
-  userLikesPhoto: boolean | undefined;
-  singlePiece: undefined | ImageDetails | any;
-  isLoading: boolean;
-  artPieces: {
-    id: number;
-    image_src: string;
-    description: string;
-    title: string;
-    date_start: number;
-    image_id: string;
-    artist_title: string;
-  }[];
-  randomImageId: string;
-  error: string;
-}
-
-interface ImageDetails {
-  id: number;
-  image_src: string;
-  description: string;
-  title: string;
-  date_start: number;
-  date_end: number;
-  image_id: string;
-  artist_title: string;
-  thumbnail: {
-    alt_text: string;
-    height: number;
-    lqip: string;
-    width: number;
-  }
-}
-
-interface Props {
-  category: string;
-}
-
-class ArtView extends Component<Props, State> {
-  constructor(props: Props) {
+class ArtView extends Component<ArtViewProps, ArtViewState> {
+  constructor(props: ArtViewProps) {
     super(props)
     this.state = {
       userLikesPhoto: undefined,

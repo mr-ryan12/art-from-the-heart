@@ -1,4 +1,5 @@
 @import "src/variables";
+@import "src/_mixins";
 
 .error {
   @include flexbox-center-center;

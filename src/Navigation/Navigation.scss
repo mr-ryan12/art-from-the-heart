@@ -1,30 +1,28 @@
 @import "src/variables";
+@import "src/_mixins";
 
 .navigation-bar {
-  background-color: $primary-color;
-  color: $primary-color;
-  border-bottom: 5px solid red;
-  display: flex;
+  @include navigation-bar($primary-color);
+}
+
+.navigation-bar-dark {
+  @include navigation-bar($primary-color-dark);
 }
 
 .behind-logo {
-  background-color: $secondary-color;
-  color: $primary-color;
-  font-size: 30px;
-  padding: 20px;
-  display: flex;
-  width: 100%;
-  max-width: 66%;
-  margin: 0px;
+  @include behind-logo($primary-color, $secondary-color);
+}
+
+.behind-logo-dark {
+  @include behind-logo($primary-color-dark, $secondary-color-dark);
 }
 
 .angled-end {
-  position: absolute;
-  left: calc(66% + 40px);
-  border-bottom: 110px solid transparent;
-  border-left: 110px solid $secondary-color;
-  top: 0px;
-  display: inline-block;
+  @include angled-end($secondary-color);
+}
+
+.angled-end-dark {
+  @include angled-end($secondary-color-dark);
 }
 
 .title-link {
@@ -33,7 +31,11 @@
 }
 
 .art-from-the {
-  color: $primary-color;
+  @include art-from-the($primary-color);
+}
+
+.art-from-the-dark {
+  @include art-from-the($primary-color-dark);
 }
 
 .logo-accent {
@@ -50,7 +52,14 @@
     justify-content: center;
     background-color: $secondary-color;
   }
+  .navigation-bar-dark {
+    justify-content: center;
+    background-color: $secondary-color-dark;
+  }
   .angled-end {
+    display: none;
+  }
+  .angled-end-dark {
     display: none;
   }
 }

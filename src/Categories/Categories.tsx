@@ -1,12 +1,9 @@
 import React from 'react'
 import CategoryCard from '../CategoryCard/CategoryCard'
+import { CategoriesProps } from '../interface'
 import './Categories.scss'
 
-interface Props {
-  categories: Array<string>
-}
-
-const Categories: React.FC<Props> = props => {
+const Categories: React.FC<CategoriesProps> = props => {
   const allCategories = props.categories.map(category => {
     return (
       <CategoryCard key={category} category={category} />

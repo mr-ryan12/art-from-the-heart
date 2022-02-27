@@ -1,0 +1,36 @@
+@mixin flexbox-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin navigation-bar($primaryColor) {
+  background-color: $primaryColor;
+  color: $primaryColor;
+  border-bottom: 5px solid red;
+  display: flex;
+}
+
+@mixin behind-logo($primaryColor, $secondaryColor) {
+  background-color: $secondaryColor;
+  color: $primaryColor;
+  font-size: 30px;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 66%;
+  margin: 0px;
+}
+
+@mixin angled-end($secondaryColor) {
+  position: absolute;
+  left: calc(66% + 40px);
+  border-bottom: 110px solid transparent;
+  border-left: 110px solid $secondaryColor;
+  top: 0px;
+  display: inline-block;
+}
+
+@mixin art-from-the($color) {
+  color: $color;
+}
