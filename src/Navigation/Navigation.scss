@@ -51,6 +51,9 @@
   font-size: 2.9vh;
   background: none;
   cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 800px) {
@@ -67,6 +70,12 @@
   }
   .angled-end-dark {
     display: none;
+  }
+  .behind-logo {
+    max-width: 100%;
+  }
+  .dark-mode-button {
+    top: 40px;
   }
 }
 

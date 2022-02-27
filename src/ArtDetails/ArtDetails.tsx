@@ -4,14 +4,13 @@ import '../ArtView/ArtView.scss'
 import { Link } from 'react-router-dom'
 import { ArtDetailsProps } from '../interface';
 import { motion } from "framer-motion"
-import { ArtDetailsProps } from '../interface'
 
 const ArtDetails: React.FC<ArtDetailsProps> = props => {
   const likedMessage = props.isLiked ? <p className="percent-message">You have great taste!</p>
                                      : <p className="percent-message">You have amazing taste!</p>
   return (
     <motion.section 
-      {"art-details-container" + props.darkMode}
+      className={"art-details-container" + props.darkMode}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       transition={{ duration: .4 }}
