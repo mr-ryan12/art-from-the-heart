@@ -53,6 +53,11 @@
     cursor: pointer;
     transition: 0.2s;
   }
+  &:focus {
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+  }
 }
 
 @mixin ratings-choice($secondaryColor, $borderRadius, $shadow) {
@@ -64,6 +69,11 @@
   box-shadow: $shadow;
   display: flex;
   &:hover {
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  &:focus {
     background-color: red;
     cursor: pointer;
     transition: 0.2s;
@@ -117,6 +127,11 @@
     cursor: pointer;
     transition: 0.2s;
   }
+  &:focus {
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+  }
 }
 
 @mixin error-page($primaryColor, $secondaryColor, $borderRadius, $shadow) {
@@ -132,6 +147,10 @@
   cursor: pointer;
   text-decoration: none;
   &:hover {
+    background-color: red;
+    transition: 0.2s;
+  }
+  &:focus {
     background-color: red;
     transition: 0.2s;
   }

@@ -20,9 +20,3 @@
 .return-to-main-dark {
   @include error-page($primary-color-dark, $secondary-color-dark, $border-radius, $shadow-dark)
 }
-
-.return-to-main:hover,
-.return-to-main:focus {
-  background-color: red;
-  transition: 0.2s;
-}

@@ -26,14 +26,6 @@ button {
   @include main-details-buttons($primary-color-dark, $secondary-color-dark, $border-radius, $shadow);
 }
 
-.go-back-button:hover,
-.generate-new-button:hover,
-.go-back-button:focus,
-.generate-new-button:focus {
-  background-color: red;
-  transition: 0.2s;
-}
-
 .button-container {
   @include flexbox-center-center;
   font-size: 20px;
