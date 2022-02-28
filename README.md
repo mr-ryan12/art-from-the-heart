@@ -19,7 +19,7 @@
 
 Art From The Heart is a web application that allows users to overcome internal and external biases to answer the only question that matters: Do I like this work of art? 
 
-The homepage greets a user with categories of art pulled directly from the Art Institute of Chicago. Upon clicking a category, a random work of art will be displayed for a user to rate up or down. Only after they rate the work of art will the details about the author, creation date, description of the work, etc. be shown to the user. This allows people to view and enjoy art without the implications of certain biases being forced upon them such as ___ ___ or ____. After they have rated the art they can then choose to see another art piece from that category or they can choose to go home and select another category. 
+The homepage greets a user with categories of art pulled directly from the Art Institute of Chicago. Upon clicking a category, a random work of art will be displayed for a user to rate up or down. Only after they rate the work of art will the details about the author, creation date, description of the work, etc. be shown to the user. This allows people to view and enjoy art without the implications of certain biases being forced upon them such as those created by classism, or elitism. After they have rated the art they can then choose to see another art piece from that category or they can choose to go home and select another category. 
 
 
 ## Tech Used
@@ -72,8 +72,6 @@ Individual Art View:
 Art Details View:
 
 *IMAGE GOES HERE*
-
-A user can select an individual movie to view more details. They can access the movie's trailer, the runtime, year of release, description, rating, and genre(s) that specific movie falls into.
 
 Art From the Heart is set up to be tablet and mobile responsive and resizes nicely for different size screens:
 
