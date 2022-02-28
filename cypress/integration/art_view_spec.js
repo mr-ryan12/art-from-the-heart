@@ -74,6 +74,6 @@ describe('Art View User Flow', () => {
     cy.get('body').should('have.css', 'background-color', 'rgb(0, 0, 0)')
     cy.get('body').should('have.css', 'color', 'rgb(255, 255, 255)')
     cy.get('.ratings-choice-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
-    
+    cy.get('.behind-logo-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
   })
 })
