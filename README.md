@@ -3,6 +3,9 @@
 - Click [HERE](https://frontend.turing.edu/projects/module-3/stretch.html) to view the project spec
 - Click [HERE](https://art-from-the-heart-mr-ryan12.vercel.app/) to view the deployed site
 
+## Learning Goals
+   This site was created with the intent to learn TypeScript!
+
 ## Table of Contents
 - [Abstract](#abstract)
 - [Tech Used](#tech-used)
@@ -42,7 +45,7 @@ The homepage greets a user with categories of art pulled directly from the Art I
 To install this project, please see below:
 
 ```bash
-1. Clone down this Repository using `git clone`
+1. Clone down this Repository using `git clone git@github.com:mr-ryan12/art-from-the-heart.git`
 2. Next, `cd` into the cloned repository and `npm install` to install library dependencies
 3. Finally, run `npm start` and open up localhost at the port indicated to view the webpage (http://localhost:3000/)
 ```
