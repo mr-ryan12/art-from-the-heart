@@ -22,4 +22,10 @@ describe('Error Page User Flow', () => {
     cy.get('.return-to-main').contains('Back To Main Page').click()
       .url().should("eq", "http://localhost:3000/");
   })
+
+  it('should display error in dark mode', () => {
+    cy.get('.dark-mode-button').should('exist').click()
+    cy.get('.return-to-main-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
+    cy.get('.error-message').should('have.css', 'color', 'rgb(255, 255, 255)')
+  })
 })
