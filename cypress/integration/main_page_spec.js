@@ -44,5 +44,4 @@ describe('Main Page User Flow', () => {
   it('should display eight category cards', () => {
     cy.get('.category-card').should('have.length', 8)
   })
-
 })
