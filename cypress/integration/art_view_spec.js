@@ -68,10 +68,12 @@ describe('Art View User Flow', () => {
     cy.get('.dark-mode-button').click()
     cy.get('.icon-dark').should('have.attr', 'src', '/static/media/sun.2464aa5cfa90f751bee019df4ba35992.svg')
   })
-  
-  it('should change to black background, and white text after click of light/dark button', () => {
+
+  it('should change page to dark mode', () => {
     cy.get('.dark-mode-button').should('exist').click()
     cy.get('body').should('have.css', 'background-color', 'rgb(0, 0, 0)')
     cy.get('body').should('have.css', 'color', 'rgb(255, 255, 255)')
+    cy.get('.ratings-choice-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
+    
   })
 })
