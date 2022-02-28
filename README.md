@@ -73,8 +73,6 @@ Art Details View:
 
 ![art-details](https://user-images.githubusercontent.com/62816754/156053581-b3652f06-e4c1-4c0c-b17b-84b30800bf04.gif)
 
-A user can select an individual movie to view more details. They can access the movie's trailer, the runtime, year of release, description, rating, and genre(s) that specific movie falls into.
-
 Art From the Heart is set up to be tablet and mobile responsive and resizes nicely for different size screens:
 
 ![mobile-view](https://user-images.githubusercontent.com/62816754/156053644-6346970b-fad3-4165-91f0-9ba9f11bb705.gif)
