@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 import { NavProps } from '../interface'
 
 const Navigation: React.FC<NavProps> = props => {
-  const changeIcon = props.isDarkModeOn? <img src={sunIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/> : 
+  const changeIcon = props.darkMode === '-dark'? <img src={sunIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/> : 
   <img src={moonIcon} alt="Toggle Dark and Light Mode" className={"icon" + props.darkMode}/>
   return (
     <>

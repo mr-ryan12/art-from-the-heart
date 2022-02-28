@@ -46,7 +46,7 @@ describe('Art View User Flow', () => {
       .get('.art-details-title').eq(1).should('have.text', 'Frederic Edwin Church')
       .get('.description-details').should('have.text', 'DESCRIPTION:')
       .get('.art-details-text').eq(0).should('have.text', 'Ecuadorian landscape with people, palm trees, waterfall, and volcano in background.')
-      .get('.percent-message').contains("of other voters liked this art! You have great taste!")
+      .get('.percent-message').contains("You have great taste!")
   })
 
   it('should display art details after click', () => {
@@ -61,6 +61,19 @@ describe('Art View User Flow', () => {
       .get('.art-details-title').eq(1).should('have.text', 'Frederic Edwin Church')
       .get('.description-details').should('have.text', 'DESCRIPTION:')
       .get('.art-details-text').eq(0).should('have.text', 'Ecuadorian landscape with people, palm trees, waterfall, and volcano in background.')
-      .get('.percent-message').contains("of other people agree! Congratulations!")
+      .get('.percent-message').contains("You have amazing taste!")
+  })
+
+  it('should display dark mode', () => {
+    cy.get('.dark-mode-button').click()
+    cy.get('.icon-dark').should('have.attr', 'src', '/static/media/sun.2464aa5cfa90f751bee019df4ba35992.svg')
+  })
+
+  it('should change page to dark mode', () => {
+    cy.get('.dark-mode-button').should('exist').click()
+    cy.get('body').should('have.css', 'background-color', 'rgb(0, 0, 0)')
+    cy.get('body').should('have.css', 'color', 'rgb(255, 255, 255)')
+    cy.get('.ratings-choice-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
+    cy.get('.behind-logo-dark').should('have.css', 'background-color', 'rgb(255, 255, 255)')
   })
 })

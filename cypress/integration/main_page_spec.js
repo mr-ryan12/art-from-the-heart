@@ -40,4 +40,8 @@ describe('Main Page User Flow', () => {
   it('Should be able to select a category', () => {
     cy.get('.category-card').first().click()
   })
+
+  it('should display eight category cards', () => {
+    cy.get('.category-card').should('have.length', 8)
+  })
 })
