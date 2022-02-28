@@ -63,25 +63,25 @@ Alternatively, you can access the deployed site [HERE](https://art-from-the-hear
 
 Homepage View: 
 
-*IMAGE GOES HERE*
+![homepage](https://user-images.githubusercontent.com/62816754/156053375-9b6ffb53-70ef-44f1-a72f-20e8e2ae3bc6.gif)
 
 Individual Art View:
 
-*IMAGE GOES HERE*
+![art-view](https://user-images.githubusercontent.com/62816754/156053528-675186f5-e797-4cf5-be85-fb6978667a9f.gif)
 
 Art Details View:
 
-*IMAGE GOES HERE*
+![art-details](https://user-images.githubusercontent.com/62816754/156053581-b3652f06-e4c1-4c0c-b17b-84b30800bf04.gif)
 
 A user can select an individual movie to view more details. They can access the movie's trailer, the runtime, year of release, description, rating, and genre(s) that specific movie falls into.
 
 Art From the Heart is set up to be tablet and mobile responsive and resizes nicely for different size screens:
 
-*IMAGE GOES HERE*
+![mobile-view](https://user-images.githubusercontent.com/62816754/156053644-6346970b-fad3-4165-91f0-9ba9f11bb705.gif)
 
 Art From the Heart also features a Dark Mode and can easily be toggled by the icon in the navigation bar:
 
-*IMAGE GOES HERE*
+![dark-mode](https://user-images.githubusercontent.com/62816754/156053685-1e61981e-c9f7-4e66-9b25-f1e4a1d3fa29.gif)
 
 ## Future Goals
 
